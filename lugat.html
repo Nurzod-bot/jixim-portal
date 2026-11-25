@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lugʻat — JI va XIM kafedrasi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="glossary">
+  <header id="site-header"></header>
+
+  <main class="container">
+    <div class="page-head">
+      <div class="eyebrow">Oʻzbekcha — inglizcha</div>
+      <h1>Atamalar lugʻati</h1>
+      <p>Xalqaro iqtisodiyotning asosiy tushunchalari. Qidiring, harf yoki modul boʻyicha saralang, yoki kartochka rejimida yodlang.</p>
+    </div>
+
+    <div class="g-bar">
+      <input class="search-input" id="g-q" type="search" placeholder="Atama, inglizcha nomi yoki taʼrif boʻyicha qidirish…" autocomplete="off">
+      <select id="g-mod" class="side-select" style="display:block" aria-label="Modul boʻyicha filtr"></select>
+    </div>
+    <div class="letters" id="letters"></div>
+    <div class="section-head" style="margin-bottom:14px">
+      <span class="muted" id="g-count"></span>
+      <div class="chips" id="g-mode">
+        <button class="chip active" data-mode="list">Roʻyxat</button>
+        <button class="chip" data-mode="flash">Kartochkalar</button>
+      </div>
+    </div>
+    <div id="g-out" style="padding-bottom:20px"></div>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

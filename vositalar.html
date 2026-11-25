@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vositalar — JI va XIM kafedrasi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="tools">
+  <header id="site-header"></header>
+
+  <main class="container">
+    <div class="page-head">
+      <div class="eyebrow">Amaliy mashgʻulotlar uchun</div>
+      <h1>Iqtisodiy kalkulyatorlar</h1>
+      <p>Raqamlarni oʻzgartiring — natija darhol qayta hisoblanadi. Seminar masalalarini yechish va javobingizni tekshirish uchun foydalaning.</p>
+    </div>
+
+    <div class="grid grid-2" style="padding-bottom:20px">
+
+      <!-- 1. Qiyosiy ustunlik -->
+      <section class="card tool" id="tool-ca">
+        <div class="eyebrow">Xalqaro savdo · Rikardo modeli</div>
+        <h3>Qiyosiy ustunlik kalkulyatori</h3>
+        <p class="muted" style="font-size:.9rem">1 birlik tovar ishlab chiqarish uchun zarur mehnat sarfini (soat) kiriting.</p>
+        <div class="fields">
+          <div><label for="ca-g1">1-tovar nomi</label><input id="ca-g1" value="Paxta"></div>
+          <div><label for="ca-g2">2-tovar nomi</label><input id="ca-g2" value="Mato"></div>
+        </div>
+        <table class="matrix">
+          <tr><th></th><th class="g1-name">Paxta</th><th class="g2-name">Mato</th></tr>
+          <tr><th>A mamlakat</th><td><input id="ca-a1" type="number" min="0" step="any" value="2" aria-label="A, 1-tovar"></td><td><input id="ca-a2" type="number" min="0" step="any" value="4" aria-label="A, 2-tovar"></td></tr>
+          <tr><th>B mamlakat</th><td><input id="ca-b1" type="number" min="0" step="any" value="6" aria-label="B, 1-tovar"></td><td><input id="ca-b2" type="number" min="0" step="any" value="8" aria-label="B, 2-tovar"></td></tr>
+        </table>
+        <div class="out" id="ca-out"></div>
+      </section>
+
+      <!-- 2. Bojxona -->
+      <section class="card tool" id="tool-cu">
+        <div class="eyebrow">TIF · Bojxona ishi</div>
+        <h3>Bojxona toʻlovlari kalkulyatori</h3>
+        <p class="muted" style="font-size:.9rem">QQS bojxona qiymati + boj + aksiz summasidan hisoblanadi. Stavkalarni amaldagi meʼyorlarga moslang.</p>
+        <div class="fields">
+          <div><label for="cu-val">Bojxona qiymati</label><input id="cu-val" type="number" min="0" step="any" value="10000"></div>
+          <div><label for="cu-duty">Boj stavkasi, %</label><input id="cu-duty" type="number" min="0" step="any" value="10"></div>
+          <div><label for="cu-exc">Aksiz, %</label><input id="cu-exc" type="number" min="0" step="any" value="0"></div>
+          <div><label for="cu-vat">QQS, %</label><input id="cu-vat" type="number" min="0" step="any" value="12"></div>
+          <div><label for="cu-fee">Bojxona yigʻimi (summa)</label><input id="cu-fee" type="number" min="0" step="any" value="0"></div>
+        </div>
+        <div class="out" id="cu-out"></div>
+      </section>
+
+      <!-- 3. Savdo balansi -->
+      <section class="card tool" id="tool-tb">
+        <div class="eyebrow">XIM · Makro koʻrsatkichlar</div>
+        <h3>Savdo balansi va iqtisodiyot ochiqligi</h3>
+        <p class="muted" style="font-size:.9rem">Qiymatlarni bir xil birlikda kiriting (masalan, mlrd AQSh dollari).</p>
+        <div class="fields">
+          <div><label for="tb-x">Eksport (X)</label><input id="tb-x" type="number" min="0" step="any" value="26"></div>
+          <div><label for="tb-m">Import (M)</label><input id="tb-m" type="number" min="0" step="any" value="38"></div>
+          <div><label for="tb-gdp">YaIM</label><input id="tb-gdp" type="number" min="0" step="any" value="100"></div>
+        </div>
+        <div class="out" id="tb-out"></div>
+      </section>
+
+      <!-- 4. Valyuta -->
+      <section class="card tool" id="tool-fx">
+        <div class="eyebrow">Valyuta-kredit munosabatlari</div>
+        <h3>Kross-kurs va kurs oʻzgarishi</h3>
+        <p class="muted" style="font-size:.9rem">Kurslarni oʻzingiz kiriting (Markaziy bank saytidan). Bu yerda real vaqt kurslari yoʻq.</p>
+        <div class="fields">
+          <div><label for="fx-a">1 EUR = ? USD</label><input id="fx-a" type="number" min="0" step="any" value="1.08"></div>
+          <div><label for="fx-b">1 USD = ? soʻm</label><input id="fx-b" type="number" min="0" step="any" value="12700"></div>
+        </div>
+        <div class="fields">
+          <div><label for="fx-old">USD/UZS — avvalgi</label><input id="fx-old" type="number" min="0" step="any" value="12000"></div>
+          <div><label for="fx-new">USD/UZS — hozirgi</label><input id="fx-new" type="number" min="0" step="any" value="12700"></div>
+        </div>
+        <div class="out" id="fx-out"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

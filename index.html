@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JI va XIM kafedrasi — talabalar portali</title>
+  <meta name="description" content="Jahon iqtisodiyoti va xalqaro iqtisodiy munosabatlar kafedrasi talabalari uchun interaktiv oʻquv portali: modullar, testlar, lugʻat va kalkulyatorlar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home">
+  <header id="site-header"></header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Talabalar uchun oʻquv portali</div>
+          <h1>Jahon iqtisodiyoti va <span>xalqaro iqtisodiy munosabatlar</span> kafedrasi</h1>
+          <p class="lead">Barcha fanlar bir joyda: mavzular, seminar topshiriqlari, oʻz-oʻzini tekshirish testlari, atamalar lugʻati va iqtisodiy kalkulyatorlar.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#modullar">Modullarni koʻrish</a>
+            <a class="btn btn-ghost" href="testlar.html">Testni boshlash</a>
+          </div>
+          <div class="stats">
+            <div class="stat"><strong id="stat-mod">—</strong><span>modul</span></div>
+            <div class="stat"><strong id="stat-top">—</strong><span>mavzu</span></div>
+            <div class="stat"><strong id="stat-term">—</strong><span>atama</span></div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <!-- Dekorativ globus va savdo yoʻllari -->
+          <svg viewBox="0 0 400 400">
+            <circle cx="200" cy="200" r="150" fill="var(--brand-soft)" stroke="var(--brand)" stroke-width="1.5"/>
+            <ellipse cx="200" cy="200" rx="60" ry="150" fill="none" stroke="var(--brand)" stroke-opacity=".35"/>
+            <ellipse cx="200" cy="200" rx="115" ry="150" fill="none" stroke="var(--brand)" stroke-opacity=".25"/>
+            <path d="M50 200h300M70 130h260M70 270h260" stroke="var(--brand)" stroke-opacity=".25"/>
+            <path d="M110 150 Q200 60 290 165" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-dasharray="6 6">
+              <animate attributeName="stroke-dashoffset" from="24" to="0" dur="1.2s" repeatCount="indefinite"/></path>
+            <path d="M130 270 Q220 330 285 230" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-dasharray="6 6">
+              <animate attributeName="stroke-dashoffset" from="0" to="24" dur="1.4s" repeatCount="indefinite"/></path>
+            <path d="M110 150 Q120 220 130 270" fill="none" stroke="var(--brand)" stroke-width="2" stroke-dasharray="4 6">
+              <animate attributeName="stroke-dashoffset" from="20" to="0" dur="1.6s" repeatCount="indefinite"/></path>
+            <g fill="var(--accent)"><circle cx="110" cy="150" r="7"/><circle cx="290" cy="165" r="7"/><circle cx="130" cy="270" r="7"/><circle cx="285" cy="230" r="7"/></g>
+            <g fill="var(--surface)" stroke="var(--line)"><rect x="250" y="40" width="120" height="48" rx="10"/><rect x="20" y="315" width="130" height="48" rx="10"/></g>
+            <text x="264" y="60" font-size="11" fill="var(--muted)" font-family="Inter, sans-serif">Eksport</text>
+            <text x="264" y="78" font-size="15" font-weight="700" fill="var(--ok)" font-family="Inter, sans-serif">▲ +8.4%</text>
+            <text x="34" y="335" font-size="11" fill="var(--muted)" font-family="Inter, sans-serif">USD/UZS</text>
+            <text x="34" y="353" font-size="15" font-weight="700" fill="var(--ink)" font-family="Inter, sans-serif">Kross-kurs</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:8px">
+      <div class="container split">
+        <div class="card" id="continue"></div>
+        <div class="card" id="events"></div>
+      </div>
+    </section>
+
+    <section class="section" id="modullar">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="eyebrow">Oʻquv dasturi</div><h2>Modullar</h2></div>
+          <div class="chips" id="kurs-filter" role="group" aria-label="Kurs boʻyicha filtr"></div>
+        </div>
+        <div class="grid grid-3" id="module-grid"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head"><div><div class="eyebrow">Interaktiv</div><h2>Oʻrganish vositalari</h2></div></div>
+        <div class="grid grid-3">
+          <a class="card quick" href="testlar.html">
+            <span class="quick-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14M12 17.5v.01"/></svg></span>
+            <span><h3>Testlar markazi</h3><p>Har bir modul boʻyicha test va aralash imtihon rejimi, natijalar saqlanadi.</p></span>
+          </a>
+          <a class="card quick" href="lugat.html">
+            <span class="quick-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 19V5"/></svg></span>
+            <span><h3>Atamalar lugʻati</h3><p>Oʻzbekcha–inglizcha atamalar, qidiruv va yodlash uchun kartochkalar.</p></span>
+          </a>
+          <a class="card quick" href="vositalar.html">
+            <span class="quick-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01"/></svg></span>
+            <span><h3>Iqtisodiy kalkulyatorlar</h3><p>Qiyosiy ustunlik, bojxona toʻlovlari, savdo balansi va valyuta kursi.</p></span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
